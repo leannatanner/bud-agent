@@ -12,10 +12,11 @@ def main():
 
     client = genai.Client(api_key=api_key)
 
+    # Allows user input for prompts
     parser = argparse.ArgumentParser(description="Chatbot")
     parser.add_argument("user_prompt", type=str, help="User prompt")
     args = parser.parse_args()
-    # Now we can access `args.user_prompt`
+    
 
     response = client.models.generate_content(
         model="gemini-2.5-flash",
