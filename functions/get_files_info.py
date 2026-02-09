@@ -27,6 +27,6 @@ def get_files_info(working_directory, directory="."):
     except FileNotFoundError:
         return f"Error: could not locate file"
     except PermissionError:
-        return f"Error: You do not have file access"
+        return f"Error: you do not have file access"
     except Exception as e:
-        return f"Error: {e},could not process this request"
+        return f"Error: {e}, could not process this request"
